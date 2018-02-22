@@ -1,0 +1,32 @@
+---
+- type: "textfile"
+  file: "part03.train.csv.gz"
+  format: "csv"
+  entity_type: "rating"
+  metadata: {}
+- type: "textfile"
+  file: "../../data/movies.csv"
+  format: "delimited"
+  delimiter: ","
+  entity_type: "item"
+  header: true
+  columns:
+  - name: "id"
+    type: "java.lang.Long"
+  - name: "name"
+    type: "java.lang.String"
+- type: "textfile"
+  file: "../../data/tags.csv"
+  format: "delimited"
+  delimiter: ","
+  entity_type: "item-tag"
+  header: true
+  columns:
+  - name: "item"
+    type: "java.lang.Long"
+  - name: "user"
+    type: "java.lang.Long"
+  - name: "tag"
+    type: "java.lang.String"
+  - name: "timestamp"
+    type: "java.lang.Long"

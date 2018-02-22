@@ -1,0 +1,13 @@
+---
+name: "crossfold"
+datasets:
+- train: "part01.train.yaml"
+  test: "part01.test.yaml"
+- train: "part02.train.yaml"
+  test: "part02.test.yaml"
+- train: "part03.train.yaml"
+  test: "part03.test.yaml"
+- train: "part04.train.yaml"
+  test: "part04.test.yaml"
+- train: "part05.train.yaml"
+  test: "part05.test.yaml"

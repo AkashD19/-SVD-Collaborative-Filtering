@@ -1,0 +1,37 @@
+{
+    "output_file": "eval-results.csv",
+    "user_output_file": "eval-users.csv",
+    "cache_directory": "eval-cache",
+    "thread_count": 0,
+    "share_model_components": true,
+    "datasets": [
+        "crossfold.out/datasets.yaml"
+    ],
+    "algorithms": {
+        "algorithms": "../etc/algorithms.groovy"
+    },
+    "tasks": [
+        {
+            "type": "predict",
+            "output_file": null,
+            "metrics": [
+                "coverage",
+                "rmse",
+                "ndcg"
+            ]
+        },
+        {
+            "type": "recommend",
+            "output_file": null,
+            "metrics": [
+                "ndcg",
+                "map",
+                "mrr"
+            ],
+            "list_size": 10,
+            "candidates": "allItems",
+            "exclude": "user.trainItems",
+            "label_prefix": null
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+---
+type: "textfile"
+file: "part02.test.csv.gz"
+format: "csv"
+entity_type: "rating"
+metadata: {}
